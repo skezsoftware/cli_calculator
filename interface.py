@@ -23,3 +23,15 @@ parser.add_argument("b", type=float, help="Second number")
 
 #Parse arguements
 args = parser.parse_args()
+
+#Perform the requested operation
+if args.operation == "add":
+    result = add(args.a, args.b)
+elif args.operation == "subtract":
+    result = subtract(args.a, args.b)
+elif args.operation == "multiply":
+    result = multiply(args.a, args.b)
+elif args.operation == "divide":
+    result = divide(args.a, args.b)
+
+print(f"The result is: {result}")
